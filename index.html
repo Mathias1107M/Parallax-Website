@@ -4,194 +4,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="探索互動式的萬聖節派對專案，展示響應式設計、動畫與網頁開發技巧，沉浸在萬聖節的神祕氛圍中。">
+    <meta name="description" content="輕量打卡系統原型，提供帳號管理、打卡、請假、補打卡與報表匯出功能。">
 
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/logo.png">
 
-    <!-- Page Title -->
-    <title>視差捲動網站</title>
+    <title>雲端打卡系統｜管理與出勤整合</title>
 
-    <!-- CSS Files -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="animation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-    <!-- Open Graph meta tags for image sharing -->
-    <meta property="og:title" content="視差捲動網站">
-    <meta property="og:description"
-        content="探索互動的萬聖節派對專案，沉浸在萬聖節的神祕氛圍中。">
-    <meta property="og:image" content="https://drive.google.com/uc?id=1GFbBHTi7w8weRVqLJ7bkofezEEGg4U30">
-    <meta property="og:type" content=”website” />
-    <!-- <meta property="og:url" content="https://parallax-website-by-vineet.netlify.app/"> -->
 </head>
 
 <body>
-    <!-- This is the header/ Nav Bar -->
-    <header id="header">
-        <a href="#" class="logo">Parallax</a>
-        <ul>
-            <li><a href="#" class="active">首頁</a></li>
-            <li><a href="#sec">關於</a></li>
-            <li><a href="#footer">聯絡</a></li>
-        </ul>
+    <header class="site-header">
+        <a href="#" class="logo">ClockWorks</a>
+        <nav>
+            <a href="#overview">系統介紹</a>
+            <a href="#login">登入</a>
+            <a href="#dashboard">員工專區</a>
+            <a href="#report">報表</a>
+        </nav>
     </header>
 
-    <!-- This is the Top Section (Above Water) -->
-    <section>
-        <img src="images/land/sky.png" id="sky" class="wallpaper">
-        <img src="images/land/sun.png" id="sun">
-        <img src="images/land/mountains.png" id="mountains" class="wallpaper">
-        <img src="images/land/cloud.png" id="cloud">
-        <h2 id="text"><span>「擁抱刺激的」</span><br>Mathias</h2>
-        <img src="images/land/forest.png" id="forest">
-        <img src="images/land/bird1.png" id="bird1">
-        <img src="images/land/bird2.png" id="bird2">
-        <a href="#sec" id="explore">探索</a>
-        <img src="images/land/rocks.png" id="rocks">
-        <img src="images/land/splash.png" id="splash">
-        <img src="images/land/water.png" id="water">
-    </section>
-
-    <!-- This is the Middle Section (Below Water) which has content -->
-    <div class="sec" id="sec">
-
-        <!-- Importing sea background images (on top.. so that it hides behind glass content) -->
-        <img src="images/sea/sea1.png" id="sea1" class="undersea">
-        <img src="images/sea/sea2.png" id="sea2" class="undersea">
-        <img src="images/sea/sea3.png" id="sea3" class="undersea">
-        <img src="images/sea/sea4.png" id="sea4" class="undersea">
-        <img src="images/sea/sea5.png" id="sea5" class="undersea">
-        <img src="images/sea/sea6.png" id="sea6" class="undersea">
-        <img src="images/sea/sea7.png" id="sea7" class="undersea">
-        <img src="images/sea/sea8.png" id="sea8" class="undersea">
-
-        <!-- Text Content here -->
-        <h2>視差捲動效果</h2>
-        <div id="name">作者：Vineet Kumar</div>
-
-        <br>
-
-        <div class="glass">
-            <h3>什麼是視差捲動？</h3>
-            <p>
-                視差捲動是一種網頁設計技巧，讓背景的移動速度比前景慢，形成 3D 效果，為捲動的瀏覽過程增添深度，帶來更沉浸的體驗。
-                視差效果源於視覺錯覺：眼睛會把近處的物體看得比遠處更大，也會覺得遠方的物體移動得較慢。這種錯覺早已運用在各種媒介裡，營造更逼真的層次感。
-                早期傳統動畫（像是迪士尼的《白雪公主》）與《超級瑪利歐》等遊戲就採用了視差技巧，隨著 CSS 和 HTML 的進步，視差效果才演變成今日的網頁設計手法。
-                <br><br>
-                2007 年，開發者 Glutnix 在部落格分享了最早的瀏覽器視差捲動實作，使用 JavaScript 與 CSS2，在當時的 IE6 等瀏覽器也能運作。
-                直到 2011 年 HTML5 與 CSS3 的普及，視差效果才在網頁設計師之間流行起來。支持者認為，視差背景能讓網站更具流動感與互動性，提升使用者的停留時間與體驗。
-                然而 2013 年普渡大學的研究指出，視差捲動雖提升部分體驗面向，卻未必能整體改善使用者體驗。
-            </p>
-        </div>
-
-        <br>
-
-        <div class="glass">
-            <h3>為什麼要使用視差圖形？</h3>
-            <ul>
-                <p>設計師嘗試視差圖形的兩個主要理由：</p>
-                <li>
-                    <h4>有助於說故事</h4>
-                    <p>
-                        視差圖形非常適合說故事。好的設計就是良好的溝通——在設計網站時，我們希望與訪客對話，講述產品、服務或品牌的動人故事。
-                        視差捲動能讓訪客沉浸於獨特的線上體驗，甚至在單頁網站上就能把完整故事呈現給讀者。
-                    </p>
-                </li>
-                <li>
-                    <h4>提升互動與黏著度</h4>
-                    <p>
-                        視差圖形能提高使用者互動。降低跳出率是網站設計的重要目標；跳出率衡量的是只看一頁就離開或點「返回」的比例。
-                        高跳出率會影響搜尋排名，因此任何能降低跳出率的方式都值得嘗試。精心設計的視差頁面提供動態體驗，能讓使用者停留更久。
-                    </p>
-                </li>
-            </ul>
-        </div>
-
-        <br>
-
-        <div class="glass">
-            <h3>想在網站加入視差捲動效果時，可以考慮以下幾點：
-            </h3>
-            <ul>
-                <li aria-level="1">
-                    <h4>選擇性使用</h4>
-                    <p>
-                        視差捲動用在特定元素時效果更好，不必在所有頁面、所有時間套用。可以放在標題、頁首，或僅首頁，讓它強化設計而非分散注意力。
-                    </p>
-                </li>
-                <li aria-level="1">
-                    <h4>壓縮影像</h4>
-                    <p>
-                        視差效果需要多媒體與 CSS 圖形來營造深度。若影像檔過大會拖慢載入，影響效能與體驗，務必做好壓縮與最佳化。
-                    </p>
-                </li>
-                <li aria-level="1">
-                    <h4>善用色彩</h4>
-                    <p>
-                        視差不只關於前景與背景的圖像，也與色彩有關。背景可使用較低飽和度的色調，前景則採鮮明色彩，能進一步強化層次與深度。
-                    </p>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Importing fish and seabed images -->
-        <img src="images/sea/fish1.png" id="fish1" class="fishes">
-        <img src="images/sea/fish2.png" id="fish2" class="fishes">
-        <img src="images/sea/fish3.png" id="fish3" class="fishes">
-        <img src="images/sea/fish4.png" id="fish4" class="fishes">
-        <img src="images/sea/oceanbed.png" id="seabed" class="fishes">
-
-        <!-- Container for the bubble animation -->
-        <div class="bubbles">
-            <img src="images/sea/bubble.png" alt="">
-            <img src="images/sea/bubble.png" alt="">
-            <img src="images/sea/bubble.png" alt="">
-            <img src="images/sea/bubble.png" alt="">
-            <img src="images/sea/bubble.png" alt="">
-            <img src="images/sea/bubble.png" alt="">
-            <img src="images/sea/bubble.png" alt="">
-        </div>
-    </div>
-
-    <!-- Code for the footer -->
-    <div class="footer" id="footer">
-        歡迎關注：
-        <div class="wrapper">
-            <div class="social-media">
-                <div class="icon">
-                    <i class="fa-brands fa-instagram"></i>
+    <main>
+        <section class="hero" id="overview">
+            <div class="hero-content">
+                <p class="eyebrow">雲端打卡系統</p>
+                <h1>讓出勤管理回歸簡潔。</h1>
+                <p class="lead">
+                    支援管理者帳號管理、員工打卡、請假、補打卡與即時報表。所有紀錄以本機儲存示範，
+                    方便展示流程與規則。
+                </p>
+                <div class="hero-tags">
+                    <span>帳號 000-999</span>
+                    <span>密碼 0000-9999</span>
+                    <span>每日一次上班打卡</span>
+                    <span>下班保留最後一次</span>
                 </div>
-                <span>Instagram</span>
             </div>
-            <div class="social-media">
-                <div class="icon">
-                    <i class="fa-brands fa-linkedin"></i>
-                </div>
-                <span>LinkedIn</span>
+            <div class="hero-panel">
+                <h2>系統規格重點</h2>
+                <ul>
+                    <li>管理者才能新增/設定帳號與密碼。</li>
+                    <li>員工登入後一鍵完成上班/下班打卡。</li>
+                    <li>請假支援半小時，補打卡理由限 20 字。</li>
+                    <li>員工可下載個人月報 PDF。</li>
+                </ul>
             </div>
-            <div class="social-media">
-                <div class="icon">
-                    <i class="fa-brands fa-github"></i>
-                </div>
-                <span>GitHub</span>
-            </div>
-            <div class="social-media">
-                <div class="icon">
-                    <i class="fa-solid fa-link"></i>
-                </div>
-                <span>Portfolio</span>
-            </div>
-        </div>
-        <span>由 Vineet Kumar 製作的網站 ❤️<br>SSN 工程學院資訊系四年級</span>
-    </div>
+        </section>
 
-    <!-- The button to scroll back to top -->
-    <a id="top" href="#"> <i class="fas fa-arrow-up"></i> </a>
+        <section class="grid-section" id="login">
+            <div class="section-header">
+                <h2>登入與帳號管理</h2>
+                <p>管理者可先初始化帳號，再新增員工。</p>
+            </div>
+            <div class="grid two-column">
+                <div class="card">
+                    <h3>登入</h3>
+                    <form id="loginForm">
+                        <label for="loginId">帳號</label>
+                        <input id="loginId" type="text" maxlength="3" pattern="\\d{3}" placeholder="000~999" required>
+                        <label for="loginPassword">密碼</label>
+                        <input id="loginPassword" type="password" maxlength="4" pattern="\\d{4}" placeholder="0000~9999"
+                            required>
+                        <button type="submit" class="primary">登入系統</button>
+                        <p class="form-note" id="loginHint">尚未建立管理者？請先初始化。</p>
+                    </form>
+                </div>
+                <div class="card">
+                    <h3>初始化管理者</h3>
+                    <form id="adminInitForm">
+                        <label for="adminId">管理者帳號</label>
+                        <input id="adminId" type="text" maxlength="3" pattern="\\d{3}" placeholder="000~999" required>
+                        <label for="adminPassword">管理者密碼</label>
+                        <input id="adminPassword" type="password" maxlength="4" pattern="\\d{4}" placeholder="0000~9999"
+                            required>
+                        <button type="submit" class="ghost">建立管理者</button>
+                        <p class="form-note">僅在系統無管理者時可使用。</p>
+                    </form>
+                </div>
+            </div>
+            <div class="card admin-only" id="adminAccountCard">
+                <h3>管理者帳號設定</h3>
+                <form id="accountForm" class="two-column-form">
+                    <div>
+                        <label for="accountId">新帳號</label>
+                        <input id="accountId" type="text" maxlength="3" pattern="\\d{3}" placeholder="000~999" required>
+                    </div>
+                    <div>
+                        <label for="accountPassword">新密碼</label>
+                        <input id="accountPassword" type="password" maxlength="4" pattern="\\d{4}"
+                            placeholder="0000~9999" required>
+                    </div>
+                    <div>
+                        <label for="accountRole">角色</label>
+                        <select id="accountRole">
+                            <option value="employee">一般員工</option>
+                            <option value="admin">管理者</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="primary">新增帳號</button>
+                </form>
+                <div id="accountList" class="list"></div>
+            </div>
+        </section>
+
+        <section class="grid-section" id="dashboard">
+            <div class="section-header">
+                <h2>員工專區</h2>
+                <p>登入後即可打卡、請假與補打卡。</p>
+            </div>
+            <div class="grid three-column">
+                <div class="card">
+                    <h3>今日打卡</h3>
+                    <div class="summary">
+                        <p>上班打卡：<span id="checkInStatus">尚未打卡</span></p>
+                        <p>下班打卡：<span id="checkOutStatus">尚未打卡</span></p>
+                    </div>
+                    <button id="checkInBtn" class="primary">上班打卡</button>
+                    <button id="checkOutBtn" class="ghost">下班打卡</button>
+                    <p class="form-note">下班僅保留最後一次時間。</p>
+                </div>
+                <div class="card">
+                    <h3>請假申請</h3>
+                    <form id="leaveForm">
+                        <label for="leaveDate">日期</label>
+                        <input id="leaveDate" type="date" required>
+                        <label for="leaveHours">請假時數（可半小時）</label>
+                        <input id="leaveHours" type="number" step="0.5" min="0.5" required>
+                        <label for="leaveReason">事由（限 20 字）</label>
+                        <input id="leaveReason" type="text" maxlength="20" required>
+                        <button type="submit" class="primary">送出請假</button>
+                    </form>
+                </div>
+                <div class="card">
+                    <h3>補打卡</h3>
+                    <form id="supplementForm">
+                        <label for="supplementDate">日期</label>
+                        <input id="supplementDate" type="date" required>
+                        <label for="supplementReason">事由（限 20 字）</label>
+                        <input id="supplementReason" type="text" maxlength="20" required>
+                        <button type="submit" class="ghost">送出補打卡</button>
+                    </form>
+                </div>
+            </div>
+            <div class="card">
+                <h3>近期紀錄</h3>
+                <div class="grid two-column">
+                    <div>
+                        <h4>打卡紀錄</h4>
+                        <div id="attendanceList" class="list"></div>
+                    </div>
+                    <div>
+                        <h4>請假與補打卡</h4>
+                        <div id="leaveList" class="list"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid-section" id="report">
+            <div class="section-header">
+                <h2>報表下載</h2>
+                <p>員工帳號可下載個人出勤報表 PDF。</p>
+            </div>
+            <div class="card">
+                <form id="reportForm" class="two-column-form">
+                    <div>
+                        <label for="reportYear">年份</label>
+                        <input id="reportYear" type="number" min="2000" max="2100" required>
+                    </div>
+                    <div>
+                        <label for="reportMonth">月份</label>
+                        <select id="reportMonth" required>
+                            <option value="">請選擇</option>
+                            <option value="1">1 月</option>
+                            <option value="2">2 月</option>
+                            <option value="3">3 月</option>
+                            <option value="4">4 月</option>
+                            <option value="5">5 月</option>
+                            <option value="6">6 月</option>
+                            <option value="7">7 月</option>
+                            <option value="8">8 月</option>
+                            <option value="9">9 月</option>
+                            <option value="10">10 月</option>
+                            <option value="11">11 月</option>
+                            <option value="12">12 月</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="primary">下載 PDF</button>
+                </form>
+                <p class="form-note">
+                    報表為示範用途，以英文摘要輸出（瀏覽器可另存為 PDF）。
+                </p>
+                <div id="reportPreview" class="list"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div>
+            <strong>ClockWorks 雲端打卡系統</strong>
+            <p>示範版本：資料儲存在瀏覽器中，重新整理不會消失。</p>
+        </div>
+        <button id="logoutBtn" class="ghost">登出</button>
+    </footer>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="action.js"></script>
 </body>
-
-<!-- Always include javascript at end of file...just above html tag -->
-<script src="action.js"></script>
 
 </html>

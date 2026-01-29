@@ -1,419 +1,326 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:500,600,700,800,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+:root {
+    color-scheme: light;
+    --primary: #1b5b8f;
+    --primary-dark: #134166;
+    --secondary: #f4f7fb;
+    --surface: #ffffff;
+    --text-main: #1a1f2b;
+    --text-muted: #4d5b6a;
+    --border: #d7e0ea;
+    --shadow: 0 15px 40px rgba(10, 40, 80, 0.12);
+}
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    color: white;
 }
 
-html,
 body {
-    overflow-x: hidden;
-    /* To prevent Horizontal scroll */
+    background: linear-gradient(180deg, #eef4fb 0%, #fefefe 100%);
+    color: var(--text-main);
 }
 
-html {
-    scroll-behavior: smooth;
-    /* To scrolling animation */
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
-#header {
-    position: absolute;
-    /* To Overlap with background */
+.site-header {
+    position: sticky;
     top: 0;
-    left: 0;
-    width: 100%;
-    padding: 1.5em 5em;
-    display: flex;
-    /* To get elements in row */
-    justify-content: space-between;
-    align-items: center;
-    z-index: 99999;
-    /* Header shld be above everything */
-}
-
-#header .logo {
-    color: #002431;
-    font-weight: 800;
-    font-size: 2.5em;
-    text-decoration: none;
-    /* To prevent Underline */
-}
-
-#header ul {
-    display: flex;
-    /* To get elements in row */
-    justify-content: space-around;
-    align-items: center;
-}
-
-#header ul li {
-    list-style: none;
-    /* To Remove dot */
-    margin: 0px 10px;
-}
-
-#header ul li a {
-    text-decoration: none;
-    /* To prevent Underline */
-    padding: 6px 15px;
-    color: #003549;
-    border-radius: 20px;
-}
-
-#header ul li a:hover,
-#header ul li a.active {
-    background: #003549;
-    color: white;
-}
-
-/* The Section Body... Set it to max size of screen */
-section {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* To blend section color with water color */
-section::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(to top, #085a7a, transparent);
     z-index: 10;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 7vw;
+    border-bottom: 1px solid var(--border);
 }
 
-/* Make all images absolute and cover whole screen */
-section img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    pointer-events: none;
+.site-header .logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary-dark);
 }
 
-/* Properites for th text on top section  */
-section #text span {
-    font-size: 0.2em;
-    letter-spacing: 2px;
-    font-weight: 400;
-    color: white;
+.site-header nav {
+    display: flex;
+    gap: 20px;
+    font-size: 0.95rem;
 }
 
-section #text {
-    position: absolute;
-    color: #004660;
-    font-size: 10vw;
-    text-align: center;
-    line-height: 0.55em;
-    font-family: 'Rancho', cursive;
-    transform: translateY(-50%);
-    top: 50%;
-}
-
-
-/* The explore Button */
-#explore {
-    text-decoration: none;
-    /* To prevent Underline */
-    padding: 8px 25px;
-    background: white;
-    color: #003549;
-    font-size: 1.3em;
-    font-weight: bold;
-    letter-spacing: 2px;
-    border-radius: 40px;
-    transform: translateY(100px);
-    /* To move it 100px below from center */
-}
-
-#explore:hover {
-    background: #003549;
-    color: white;
-}
-
-/* Propeties of Top button */
-#top {
-    position: fixed;
-    width: 50px;
-    height: 50px;
-    background: #4faa2e;
-    bottom: 10%;
-    right: 5%;
-    text-decoration: none;
-    text-align: center;
-    line-height: 50px;
-    color: white;
-    font-size: 25px;
-    border-radius: 50%;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-    z-index: 100;
-}
-
-
-
-/* Glass Effect */
-.glass {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-Left: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 15px;
-    box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(4px);
-    padding: 1em;
-    margin-bottom: 2%;
-}
-
-/* Properties for middle section (below water) */
-.sec {
-    position: relative;
-    padding: 10%;
-    background: #085a7a;
-    padding-bottom: 15%;
-    z-index: 50;
-    overflow: hidden;
-}
-
-/* Properties for text content */
-.sec h2 {
-    font-size: 3.5em;
-}
-
-.sec #name {
-    font-size: 1.5em;
-    font-family: 'Rancho', cursive;
-    letter-spacing: 2px;
+.site-header nav a {
+    color: var(--text-muted);
     font-weight: 500;
-    margin-bottom: 20px;
 }
 
-.sec h3 {
-    font-size: 1.8em;
-    margin: 2%;
+.site-header nav a:hover {
+    color: var(--primary);
 }
 
-.sec h4 {
-    font-size: 1.2em;
-    text-decoration: underline;
+main {
+    padding: 0 7vw 80px;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 70px 0 40px;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    color: var(--primary-dark);
+    margin-bottom: 12px;
+}
+
+.hero-content .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+}
+
+.hero-content .lead {
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+.hero-tags {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.hero-tags span {
+    background: var(--secondary);
+    border: 1px solid var(--border);
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.hero-panel {
+    background: var(--surface);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(215, 224, 234, 0.6);
+}
+
+.hero-panel h2 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.hero-panel ul {
+    list-style: none;
+    display: grid;
+    gap: 10px;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.grid-section {
+    margin-top: 70px;
+}
+
+.section-header {
+    margin-bottom: 26px;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    color: var(--primary-dark);
+    margin-bottom: 8px;
+}
+
+.section-header p {
+    color: var(--text-muted);
+}
+
+.grid {
+    display: grid;
+    gap: 24px;
+}
+
+.grid.two-column {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.grid.three-column {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.card {
+    background: var(--surface);
+    border-radius: 18px;
+    padding: 24px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.card h3 {
+    margin-bottom: 16px;
+    color: var(--primary-dark);
+}
+
+.card h4 {
+    margin-bottom: 12px;
+    color: var(--primary-dark);
+}
+
+.card form {
+    display: grid;
+    gap: 12px;
+}
+
+label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+input,
+select {
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: #f9fbfd;
+    font-size: 0.95rem;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid rgba(27, 91, 143, 0.2);
+    border-color: var(--primary);
+}
+
+.two-column-form {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    align-items: end;
+}
+
+.summary {
+    display: grid;
+    gap: 8px;
+    margin-bottom: 16px;
+    color: var(--text-muted);
+}
+
+.primary,
+.ghost {
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
     font-weight: 600;
 }
 
-.sec p {
-    margin: 10px 20px 40px;
+.primary {
+    background: var(--primary);
+    color: white;
 }
 
-.sec ul {
-    margin: 0 5%;
+.primary:hover {
+    background: var(--primary-dark);
 }
 
-.sec ul li {
-    margin: 2%;
+.ghost {
+    background: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
 }
 
-
-/* Make all fishes image as absolute.. To overlap with background */
-.fishes {
-    position: absolute;
-    opacity: 0.8;
+.ghost:hover {
+    background: rgba(27, 91, 143, 0.08);
 }
 
-/* Properties for each fish and sea bed*/
-#fish1 {
-    top: 0%;
+.form-note {
+    font-size: 0.85rem;
+    color: var(--text-muted);
 }
 
-#fish2 {
-    top: 32%;
+.list {
+    margin-top: 12px;
+    display: grid;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
 }
 
-#fish3 {
-    top: 60%;
+.list .item {
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: #f9fbfd;
 }
 
-#fish4 {
-    top: 87%;
+.admin-only {
+    display: none;
 }
 
-#seabed {
-    width: 100%;
-    left: 0;
-    bottom: 0;
+.site-footer {
+    background: #0f2f45;
+    color: #dce7f3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 7vw;
+}
+
+.site-footer button {
+    background: transparent;
+    border: 1px solid #dce7f3;
+    color: #dce7f3;
+}
+
+.toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #0f2f45;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.toast.show {
     opacity: 1;
+    transform: translateY(0);
 }
 
-.undersea {
-    position: absolute;
-    opacity: 1;
-}
-
-#sea1 {
-    top: 10%;
-    left: 1%;
-    width: 20%;
-}
-
-#sea2 {
-    top: 16%;
-    right: 1%;
-    width: 10%;
-}
-
-#sea3 {
-    top: 40%;
-    left: 0;
-    width: 12%;
-}
-
-#sea4 {
-    top: 50%;
-    right: 0;
-    width: 12%;
-}
-
-#sea5 {
-    top: 70%;
-    left: 1%;
-    width: 10%;
-}
-
-#sea6 {
-    top: 75%;
-    right: 2%;
-    width: 6%;
-}
-
-#sea7 {
-    top: 90%;
-    right: 70%;
-    width: 10%;
-}
-
-#sea8 {
-    bottom: 0;
-    left: 55%;
-    width: 10%;
-    z-index: 100;
-}
-
-
-/* Properties for mobile */
-@media screen and (max-width: 650px) {
-
-    #header {
-        padding: 1em 2em;
-        display: flex;
+@media (max-width: 720px) {
+    .site-header {
         flex-direction: column;
+        gap: 10px;
+    }
+
+    .site-header nav {
+        flex-wrap: wrap;
         justify-content: center;
     }
 
-    #header ul {
-        padding: 0.5em;
-    }
-
-    section #text {
-        font-size: 20vw;
-        /* Adjust text size acc to screen size */
-    }
-
-    /* Using contian to make img fit mobile screen size */
-    /* height and width chnages size and position */
-    section img#cloud {
-        object-fit: contain;
-        height: 600px;
-        width: 600px;
-    }
-
-    section img#bird1 {
-        object-fit: contain;
-        height: 600px;
-        width: 400px;
-    }
-
-    section img#bird2 {
-        object-fit: contain;
-        height: 750px;
-        width: 500px;
-    }
-
-    /* Adjust text content acc to screen size */
-    .sec ul li {
-        margin: 20px;
-    }
-
-    .sec ul {
-        margin: 0px 0px;
-    }
-
-    .sec h3 {
-        font-size: 1.5em;
-        margin: 20px 0px;
-    }
-
-    .sec p {
-        margin: 1% 4%;
-    }
-
-    #seabed {
-        object-fit: contain;
-        left: 0;
-        width: 750px;
-    }
-
-    .glass {
-        backdrop-filter: blur(1px);
-    }
-
-    #sea1 {
-        top: 7%;
-        width: 40%;
-    }
-
-    #sea2 {
-        top: 25%;
-        width: 20%;
-    }
-
-    #sea3 {
-        top: 42%;
-        width: 25%;
-    }
-
-    #sea4 {
-        top: 52%;
-        width: 25%;
-    }
-
-    #sea5 {
-        top: 72%;
-        left: 1%;
-        width: 20%;
-    }
-
-    #sea6 {
-        top: 80%;
-        right: 2%;
-        width: 15%;
-    }
-
-    #sea7 {
-        top: 96%;
-        left: 1%;
-        width: 20%;
-    }
-
-    #sea8 {
-        left: 50%;
-        width: 15%;
+    .site-footer {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
     }
 }
